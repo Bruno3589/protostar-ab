@@ -75,6 +75,10 @@
 					description="JGLOBAL_SUBHEADING_DESC"
 					filter="string" />
 
+				<field name="analyticsCode"  type="text" default=""
+					label="TPL_PROTOSTAR_ANALYTICS"
+					description="TPL_PROTOSTAR_ANALYTICS_DESC" />
+
 				<field name="googleFont"
 					type="radio"
 					class="btn-group btn-group-yesno"

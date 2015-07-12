@@ -115,7 +115,24 @@ else
 			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
 		}
 	</style>
-	<?php endif; ?>
+	<?php endif;
+	//Google Universal Analytics
+	if ($this->params->get('analyticsCode'))
+	{
+	?>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', '<?php echo $this->params->get('analyticsCode')?>', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<?php
+	}
+	?>
 	<!--[if lt IE 9]>
 		<script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
