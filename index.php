@@ -127,6 +127,9 @@ else
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 	  ga('create', '<?php echo $this->params->get('analyticsCode')?>', 'auto');
+	  <?php if ($this->params->get('analyticsCookie')) : ?>
+	  ga('set', 'anonymizeIp', true);
+	  <?php endif; ?>
 	  ga('send', 'pageview');
 
 	</script>

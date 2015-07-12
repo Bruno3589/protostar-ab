@@ -79,6 +79,17 @@
 					label="TPL_PROTOSTAR_ANALYTICS"
 					description="TPL_PROTOSTAR_ANALYTICS_DESC" />
 
+				<field name="analyticsCookie"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_PROTOSTAR_ACOOKIE_LABEL"
+					description="TPL_PROTOSTAR_ACOOKIE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
 				<field name="googleFont"
 					type="radio"
 					class="btn-group btn-group-yesno"
